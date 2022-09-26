@@ -62,3 +62,22 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 
 	return (NULL);
 }
+
+/**
+  * slistint_len - Counts the number of elements in a linked list
+  * @h: The linked list to count
+  *
+  * Return: Number of elements in the linked list
+  */
+size_t listint_len(const listint_t *h)
+{
+	int lenght = 0;
+
+	while (h != NULL)
+	{
+		++lenght;
+		h = h->next;
+	}
+
+	return (lenght);
+}
